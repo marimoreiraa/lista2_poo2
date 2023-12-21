@@ -16,6 +16,7 @@ italico <i > italico </ i >
 sublinhado <u>sublinhado </u>
 
 ```
+![Diagrama 1](out/Questao2/DiagramaUML/questao2/Questao2_Diagram.png)
 
 Exercicio 3 - Faça a implementaçao de um jogo com um poder basico e mais tres poderes que melhoram este poder basico. 
 
@@ -33,6 +34,7 @@ Exercicio 3 - Faça a implementaçao de um jogo com um poder basico e mais tres 
 
 
 Dicas:
+
 • Lembre-se que a abstracao do padrao e o componente a possuem o mesmo supertipo.
 
 • Neste caso, necessariamente a abstraçao do padrao (interface ou classe abstrata) devera implementar a interface Component.
@@ -40,3 +42,5 @@ Dicas:
 • Os poderes concretos (xxx) deverao implementar a abstracao do padrao. 
 
 • É importante modelar o diagrama, pois agora estamos acoplando varios padroes, e é importante que se tenha claro o ponto de uniao entre eles. (OPCIONAL) 
+
+![Diagrama 2](out/Questao3/DiagramaUML/questao3/Questao3_Diagram.png)
