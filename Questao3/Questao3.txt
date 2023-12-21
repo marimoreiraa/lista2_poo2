@@ -1,0 +1,1 @@
+Para este sistema, também escolhi o padrão Decorator para que seja possível implementar a funcionalidade de adicionar poderes ao ataque do personagem em tempo de execução.

@@ -1,0 +1,45 @@
+@startuml Questao3_Diagram
+
+
+!define REPO_PATH ../src/main/java/br/com/marianadmoreira/questao3
+
+package "Decorator"{
+    interface Attack{
+        + execute() : void
+    }
+
+    class Basic{
+        + execute() : void
+    }
+
+    abstract class Decorator{
+        - attack: Attack
+        + Decorator(attack: Attack)
+        + execute() : void
+    }
+
+    class FirePowerDecorator{
+        + FirePowerDecorator(attack: Attack)
+        + execute() : void
+    }
+
+    class SpeedPowerDecorator{
+        + SpeedPowerDecorator(attack:Attack)
+        + execute() : void
+    }
+
+    class HealingPowerDecorator{
+        + HealingPowerDecorator(attack:Attack)
+        + execute() : void
+    }
+
+
+    Attack <|.. Basic
+    Attack <|.. Decorator
+    Decorator <|.. FirePowerDecorator
+    Decorator <|.. SpeedPowerDecorator
+    Decorator <|.. HealingPowerDecorator
+
+}
+
+@enduml

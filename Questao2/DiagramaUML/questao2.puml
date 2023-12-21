@@ -1,0 +1,57 @@
+@startuml Questao2_Diagram
+
+
+!define REPO_PATH ../src/main/java/br/com/marianadmoreira/questao2
+
+package "Decorator"{
+    interface TextComponent{
+        + render(): String
+    }
+
+    class Text{
+        - content : String
+        + Text(content:String)
+        + render() : String
+    }
+
+    abstract class Decorator{
+        - textComponent : TextComponent
+        + Decorator(textComponent:TextComponent)
+        + render() : String
+    }
+
+    class BoldDecorator{
+        + BoldDecorator(textComponent:TextComponent)
+        + render() : String
+    }
+
+    class UnderlineDecorator{
+        + UnderlineDecorator(textComponent:TextComponent)
+        + render() : String
+    }
+
+    class ItalicDecorator{
+        + ItalicDecorator(textComponent:TextComponent)
+        + render() : String
+    }
+
+    class Sentence{
+        - texts : List<TextComponent>
+        + Sentence()
+        + addText(text:TextComponent)
+        + toString() : String
+    }
+
+
+    TextComponent <|.. Text
+    TextComponent <|.. Decorator
+    Decorator <|.. BoldDecorator
+    Decorator <|.. UnderlineDecorator
+    Decorator <|.. ItalicDecorator
+
+    Sentence *-- TextComponent
+    Sentence "1" *-- "*" TextComponent
+}
+
+@enduml
+
