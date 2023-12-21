@@ -1,0 +1,2 @@
+Escolhi o padrão Decorator como solução para este sistema, pois ele permite que adicionemos novas funcionalidades a um objeto existente sem alterar sua base.
+Para esse sistema, as modificações gráficas (negrito, itálico e sublinhado) são consideradas como decorações que podem ser adicionadas dinamicamente às palavras.
